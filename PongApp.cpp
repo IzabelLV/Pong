@@ -61,7 +61,6 @@ int main() {
 
     while (!WindowShouldClose())
     {
-		//you do updates first and then the drawing MOVING THE BALL
 		ball.x += ball.speedX * GetFrameTime();
 		ball.y += ball.speedY * GetFrameTime();
 		
@@ -76,17 +75,6 @@ int main() {
 			ball.speedY *= -1;
 		}
 
-		/*if (rightPaddle.y < 0)
-		{
-			rightPaddle.y = 0;
-			rightPaddle.speed *= 500;
-		}
-		if (leftPaddle.y < 0)
-		{
-			leftPaddle.y = 0;
-			leftPaddle.speed *= 500;
-		}
-		*/
 		if (IsKeyDown(KEY_W))
 		{
 			leftPaddle.y -= leftPaddle.speed * GetFrameTime();
